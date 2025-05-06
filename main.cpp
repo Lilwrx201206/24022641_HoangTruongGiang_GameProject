@@ -276,8 +276,8 @@ void showSettings(SDL_Renderer* renderer) {
 
     Mix_PlayMusic(settingsMusic, -1); // Play music in a loop
 
-    SDL_Rect muteButton = {163, 127, 33, 33}; // Mute button rectangle
-    SDL_Rect unmuteButton = {202, 127, 33, 33}; // Unmute button rectangle
+    SDL_Rect muteButton = {202, 127, 33, 33}; // Mute button rectangle
+    SDL_Rect unmuteButton = {163, 127, 33, 33}; // Unmute button rectangle
 
     bool running = true;
     bool isMuted = false; // Track mute state
