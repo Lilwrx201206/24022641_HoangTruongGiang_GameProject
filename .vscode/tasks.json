@@ -2,7 +2,34 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "Build Full Project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Iinclude", // Thư mục chứa các file header
+                "-Llib",     // Thư mục chứa các thư viện liên kết
+                "-o", "main.exe", // Tên file thực thi đầu ra
+                "main.cpp",
+                "src/Menu.cpp",
+                "src/Game.cpp",
+                "src/HighScores.cpp",
+                "src/Settings.cpp",
+                "src/Utils.cpp",
+                "-lSDL2",
+                "-lSDL2main",
+                "-lSDL2_image",
+                "-lSDL2_mixer",
+                "-lSDL2_ttf"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build toàn bộ dự án SDL"
+        },
+        {
+            "label": "Build Active File",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -19,52 +46,12 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Generated task by g++"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+            "problemMatcher": ["$gcc"],
+            "detail": "Build file đang mở"
         }
     ]
 }
+
+
