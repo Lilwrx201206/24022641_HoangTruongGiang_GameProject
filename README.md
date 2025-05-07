@@ -27,4 +27,5 @@
 ### Build game:
 
 ```bash
-make
+ctrl+shift+b
+
