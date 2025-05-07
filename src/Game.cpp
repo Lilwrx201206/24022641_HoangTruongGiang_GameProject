@@ -19,7 +19,7 @@ void showGameOverScreen(SDL_Renderer* renderer, TTF_Font* font, bool& restartGam
         return;
     }
 
-    Mix_Music* gameOverMusic = Mix_LoadMUS("C:\\SDLproject_vscode\resource\\gameover-_-\\gameovermusic.mp3");
+    Mix_Music* gameOverMusic = Mix_LoadMUS("C:\\SDLproject_vscode\\resource\\gameover-_-\\gameovermusic.mp3");
     if (!gameOverMusic) {
         SDL_Log("Failed to load game over music: %s", Mix_GetError());
         SDL_DestroyTexture(defaultBackgroundTexture);

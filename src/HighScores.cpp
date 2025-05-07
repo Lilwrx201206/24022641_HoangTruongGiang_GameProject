@@ -78,7 +78,7 @@ void showHighScores(SDL_Renderer* renderer, TTF_Font* font) {
         return;
     }
 
-    Mix_Music* highscoreMusic = Mix_LoadMUS("C:\\SDLproject_vscode\\resource\\highscore-_-\\highscore.mp3");
+    Mix_Music* highscoreMusic = Mix_LoadMUS("C:\\SDLproject_vscode\\resource\\highscore-_-\\highscoremusic.mp3");
     if (!highscoreMusic) {
         SDL_Log("Failed to load highscore music: %s", Mix_GetError());
         SDL_DestroyTexture(backgroundTexture);
